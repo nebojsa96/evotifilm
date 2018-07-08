@@ -1,0 +1,24 @@
+{
+  "name": "evotifilm",
+  "version": "1.0.0",
+  "description": "Web site with movie suggesions, reviews and marks - movie pick assistent",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nebojsa96/evotifilm.git"
+  },
+  "author": "Nebojša Sretenović",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nebojsa96/evotifilm/issues"
+  },
+  "homepage": "https://github.com/nebojsa96/evotifilm#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "sqlite3": "^4.0.1"
+  }
+}
