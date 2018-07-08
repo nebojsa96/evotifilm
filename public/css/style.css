@@ -1,0 +1,387 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/patterns/pattern2.jpg");
+    font-family: Helvetica;
+}
+
+#sajt{
+    margin: 20px auto;
+    padding: 0;
+    width: 70%;
+    min-width: 320px;
+    background-color: dimgray;
+    box-shadow: 5px 5px 10px black;
+}
+
+/*============================= HEADER =============================*/
+
+header{
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.traka{
+    margin: 0;
+    padding: 10px;
+    background-color: black;
+    width: 100%;
+    min-height: 30px;
+    height: auto;
+    overflow: hidden;
+}
+
+#social{
+    float: right;
+    margin: 0;
+}
+
+#social li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+#social i{
+	font-size: 350%;
+	margin: 1%;
+	padding: 5% 5% 5% 4%;
+	color: white;
+      
+}
+
+#social i:hover {
+	color: yellow;
+        
+}
+
+.logo{
+    float: left;
+    width: 30%;
+    height: 300px;
+    background-color: red;
+}
+
+.galerija{
+    float: right;
+    width: 70%;
+    height: 300px;
+    background-color: green;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+}
+
+.galerija img{
+    height: 100%;
+    width: 100%;
+}
+
+/*============================= PORUKA ==============================*/
+#poruka{
+    width: 100%;
+    max-height: 130px;
+    background-color: dimgray;
+    overflow: hidden;
+}
+
+#poruka img{
+    display: none;
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+#poruka p{
+    margin: 0;
+    padding: 14px 16px;
+    color: gainsboro;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/*============================= MENI ==============================*/
+
+nav{
+    width: 100%;
+    border-bottom: 10px solid black;
+    background-color: white;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav li a{
+    display: block;
+    height: auto;
+    padding: 7px 16px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+}
+
+nav li a:hover{
+    text-decoration: none;
+}
+
+nav input{
+    width: 90%;
+}
+
+nav input:focus{
+    background-color: yellow;
+}
+
+nav .padajuci{
+    float: left;
+    width: 25%;
+}
+
+nav .padajuci > a:hover, nav .padajuci:hover > a{ 
+    background-color: yellow;
+    box-shadow: 5px 5px 10px dimgray;
+    color: black;
+}
+
+nav .podmeni{
+    display: none;
+    margin: auto;
+    width: 90%;
+    background-color: black;
+}
+
+nav .podmeni li{
+    width: 100%;
+}
+    
+nav .podmeni li a{
+    color: white;
+}
+
+.kliknuto{
+    color: gold !important;
+}
+
+nav .podmeni li a:hover{
+    /*color: white;*/
+    background-color: dimgray;
+}
+ul.podmeni > li:hover
+{
+    background-color: dimgray;
+}
+/*==================  SADRZAJ  ================================*/
+
+main{
+    padding: 20px 20px 10px 20px;
+    overflow: hidden;
+}
+
+.film {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 5px solid black;
+    background-color: white;
+    box-shadow: 5px 5px 10px black;
+    overflow: auto;
+}
+.film .naslov{
+    font-size: 22pt;
+    margin: 0;
+}
+
+.film .godina{
+    margin-top: 0;
+}
+
+.film img  {
+    width: 300px;
+    height: auto;
+    float: left;
+    margin: 0 15px 15px 0;
+}
+.prikaz {
+    color:blue;
+    float:right;
+    margin: 0;
+}
+.prikaz:hover {
+    text-decoration: underline;
+}
+
+/*==================================================*/
+.film.detaljno img {
+    width: 400px;
+}
+
+.film.detaljno p.godina{
+    margin-bottom: 60px;
+}
+
+.film.detaljno p:not(.naslov){
+    font-size: 120%;
+}
+
+.film.detaljno p.opis_detaljno {
+    clear: left;
+    display: block;
+}
+
+.film.detaljno p.zakljucak {
+    display: block;
+}
+
+.film.detaljno a.link{
+    display: inline;
+}
+
+/*==================================================*/
+.film.ukratko img{
+   margin: 0 15px 0 0;
+}
+
+.film.ukratko p.opis_detaljno {
+    display: none;
+}
+
+.film.ukratko p.zakljucak {
+    display: none;
+}
+
+.film.ukratko a.link{
+    display: none;
+}
+
+
+
+
+
+/*============================ RESPONSIVE =============================*/
+
+
+@media screen and (max-width: 1200px){
+    
+    .logo, .galerija{
+        height: 250px;
+    }
+    
+    #poruka p{
+        font-size: 130%;
+    }
+    
+    nav li a{
+        font-size: 120%;
+        padding-bottom: 5px;
+    }
+   
+}
+
+@media screen and (max-width: 900px){
+    
+    #sajt{
+        width: 80%;
+    }
+}    
+
+
+@media screen and (max-width: 800px){
+    .film.ukratko img, .film.detaljno img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 750px){
+    
+    .logo, .galerija{
+        height: 200px;
+    }
+    
+    nav .padajuci{
+        clear: left;
+        width: 100%;
+    }
+    
+    nav li a{
+        font-size: 150%;
+    }
+    
+}
+
+
+@media screen and (max-width: 600px){
+    
+    #sajt{
+        width: 90%;
+    }
+    
+    .logo, .galerija{
+        height: 200px;
+    }
+    
+    .logo{
+        display: none;
+    }
+    
+    .galerija{
+        width: 100%;
+    }
+    
+    
+    #poruka img{
+        display: block;
+    }
+    
+    #poruka p{
+        float: right;
+        width: 70%;
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    
+    .film.ukratko > *:not(img){
+        display: none;
+    }
+    
+    .film.ukratko{
+        padding: 0;
+    }
+    
+    #sajt{
+        margin: 0;
+        width: 100%;
+    } 
+    
+    #poruka p{
+        font-size: 120%;
+    }
+}
+
+
+
+
+/*
+.padajuci a:not(.dugme){
+    background-color: red;
+}*/
+
+.dugme{
+    background-color: black;
+}
